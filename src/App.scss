@@ -1,0 +1,86 @@
+$primary-color: #1890ff;
+$bg-color: #f0f2f5;
+$border-radius: 8px;
+
+.emp-container {
+  padding: 24px;
+  background-color: $bg-color;
+  min-height: 100vh;
+
+  // 搜索卡片样式
+  .search-card {
+    margin-bottom: 24px;
+    border-radius: $border-radius;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+
+    .ant-card-head {
+      border-bottom: 1px solid #f0f0f0;
+      .ant-card-head-title {
+        font-size: 16px;
+        font-weight: 600;
+        color: #333;
+      }
+    }
+
+    .ant-form-item-label > label {
+      color: #666;
+      font-weight: 500;
+    }
+  }
+
+  // 表格卡片样式
+  .table-card {
+    border-radius: $border-radius;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+
+    .ant-card-head {
+      border-bottom: none;
+      padding: 0 24px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+    }
+
+    // 操作列按钮间距优化
+    .ant-space {
+      gap: 4px !important;
+    }
+
+    .ant-btn-link {
+      padding: 4px 8px;
+      
+      // 详情按钮颜色微调（可选）
+      &:first-child {
+        color: #52c41a; // 绿色，代表查看详情
+      }
+    }
+  }
+
+  // 响应式微调
+  @media (max-width: 768px) {
+    padding: 12px;
+    .search-card, .table-card {
+      margin-bottom: 12px;
+    }
+  }
+}
+
+// 详情弹窗内的 Descriptions 样式美化
+.ant-descriptions {
+  padding: 8px 0;
+
+  .ant-descriptions-item-label {
+    background-color: #fafafa;
+    font-weight: 500;
+    width: 120px;
+  }
+
+  .ant-descriptions-item-content {
+    color: #333;
+  }
+}
+
+// 加载中动画居中
+.ant-spin-nested-loading {
+  min-height: 100px;
+}
